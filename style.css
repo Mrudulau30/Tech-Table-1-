@@ -27,25 +27,25 @@
 }
 .inner-image
 {
-    position: fixed;
-    top: 3%;
+    position: absolute;
+    top: 15%;
     left: 15px;
 }
 .search
 {
-    top:5%;
-    position: fixed;
+    top:33%;
+    position: absolute;
     left:500px;
 }
 .login
-{ top:6%;
-    position: fixed;
+{ top:33%;
+    position: absolute;
     left:1300px;
 }
 .sign-up
 {
     top:6%;
-    position: fixed;
+    position: absolute;
     left: 1400px;
 
 }
@@ -95,48 +95,106 @@ button:hover {
 font-weight: 500;
 font-size: medium;
  text-align: center;
-  padding: 0px 65px;
+  padding: 0px 50px;
+  position: relative;
   }
 
- .images
- {
-     padding:50px 100px;
-     position: fixed;
- }
- .info
- {
-font-style: italic;
- }
  .main
  {
-    display:table;
-    float:left;
-    height: 100px;
-    width: 110%;
-    font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   padding-top: 20px;
+   text-align: center;
+   font-size: xx-large;
+   font-style: italic;
+   font-weight: 700;
+   padding-bottom: 70px;
+   
  }
 
- .main div{
-    width:150%;
-    margin-left: 5px;
-    margin-right: 5px;
-    float: left;
-}
-.main .images{
+.row {
+  float:left;
+ padding-bottom: 50px;
+  padding-top: 300px;
+  padding-left: 40px;
   
-  text-align: center;
-  display: inline;
-  
+  padding: 30px;
 }
-.main .images div{
-    width:15%;
-   display: inline-block;
+
+/* Clearfix (clear floats) */
+.column::after {
+  content: "";
+  clear: both;
+  display: table;
 }
+
 
 .footer
 {
-    padding-top: 600px;
+ padding-top: 80px;
+ background-color: rgb(224, 231, 231);
 }
 
-  
+
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+  padding-right: 70px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.new:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 70%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
